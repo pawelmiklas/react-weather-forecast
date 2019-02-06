@@ -1,0 +1,30 @@
+.weather-result{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: calc(100% - 200px);
+   color: #fff;
+}
+.weather-result__card{
+    font-size: 1.7rem;
+   width: 500px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   margin-top: -80px;
+}
+
+.card__title{
+    text-transform: capitalize;
+    margin-bottom: .5em;
+}
+
+.card__temp{
+    text-transform: capitalize;
+    margin: .5em 0;
+}
+.card__desc{
+    text-transform: capitalize;
+}
