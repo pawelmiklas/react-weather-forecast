@@ -19,6 +19,7 @@
 .card__title{
     text-transform: capitalize;
     margin-bottom: .5em;
+    text-align: center;
 }
 
 .card__temp{
