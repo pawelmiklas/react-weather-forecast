@@ -9,9 +9,15 @@ html,body {
     height:100%;
     font-family: 'Raleway', sans-serif;
 }
+body{
+    min-height: 550px;
+}
+#root{
+    height: 100%;
+}
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     transition: background-color 1000ms linear;
     background-image: linear-gradient(to bottom, #ffd300, #ffbe00, #ffa800, #ff9100, #ff7a00);
 }
