@@ -4,11 +4,12 @@ import {Skycons} from "../../skycons";
 
 const WeatherResult = (props) => {
     const {description, inputValue, temp, iconName, show} = props.values;
-    let skycons = new Skycons({"color": "white"});
-    skycons.set("icon1", Skycons[iconName]);
-
     let structure;
-    if(!show && inputValue.length > 0){
+    // debugger
+    if(show === ''){
+        structure = null
+    }
+    else if(show === false && inputValue.length > 0){
         structure = (
         <div className="weather-result">
             <div className="weather-result__card">
@@ -16,7 +17,9 @@ const WeatherResult = (props) => {
             </div>
         </div>
         )
-    }else if(inputValue.length > 0){
+    }else if(show && inputValue.length > 0){
+        let skycons = new Skycons({"color": "white"});
+        skycons.set("icon1", Skycons[iconName]);
         structure = (
         <div className="weather-result">
             <div className="weather-result__card">
@@ -28,7 +31,7 @@ const WeatherResult = (props) => {
         </div>
         )
     }
-    return ( 
+    return (
         <>
             {structure}
         </>
